@@ -33,6 +33,11 @@ Definem as responsabilidades entre objetos e classes.
 
 ### Fontes
 
-#### Youtube
+#### Cursos Youtube
 
-Curso Padrões de projeto: https://www.youtube.com/watch?v=PrrbDOJLVfI&list=PLnOrFdw5rkTyDPr1yOW2H14Oq8u7IiDyP&index=2
+1. https://www.youtube.com/watch?v=PrrbDOJLVfI&list=PLnOrFdw5rkTyDPr1yOW2H14Oq8u7IiDyP&index=2
+1. https://www.youtube.com/watch?v=-JFLQcPIElo&list=PL-diSX68u5h81yHqhjvM97LT-cPz2oid7
+
+### Artigos
+
+1.
