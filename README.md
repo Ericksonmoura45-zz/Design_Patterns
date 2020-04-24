@@ -30,14 +30,16 @@ Definem as responsabilidades entre objetos e classes.
 1. Observer
 1. State
 1. Strategy
+1. Null Object
 
 ### Fontes
 
-#### Cursos Youtube
+### Cursos Youtube
 
 1. https://www.youtube.com/watch?v=PrrbDOJLVfI&list=PLnOrFdw5rkTyDPr1yOW2H14Oq8u7IiDyP&index=2
 1. https://www.youtube.com/watch?v=-JFLQcPIElo&list=PL-diSX68u5h81yHqhjvM97LT-cPz2oid7
+1. https://www.youtube.com/watch?v=BWprw8UHIzA&list=PLZlA0Gpn_vH_CthENcPCM0Dww6a5XYC7f
 
-### Artigos
+### Sites e Artigos
 
-1.
+1. Source Making: https://sourcemaking.com/
