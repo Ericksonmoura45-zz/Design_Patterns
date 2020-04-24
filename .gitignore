@@ -1,24 +1,3 @@
 #Ignores all node_modules/ and package-lock.json at any folder
 *node_modules/
 *package-lock.json
-
-#FactoryMethod's react-login-auth
-FactoryMethod/react-login-auth/.pnp
-FactoryMethod/react-login-auth.pnp.js
-
-# testing
-FactoryMethod/react-login-auth/coverage
-
-# production
-FactoryMethod/react-login-auth/build
-
-# misc
-FactoryMethod/react-login-auth/.DS_Store
-FactoryMethod/react-login-auth/.env.local
-FactoryMethod/react-login-auth/.env.development.local
-FactoryMethod/react-login-auth/.env.test.local
-FactoryMethod/react-login-auth/.env.production.local
-
-FactoryMethod/react-login-auth/npm-debug.log*
-FactoryMethod/react-login-auth/yarn-debug.log*
-FactoryMethod/react-login-auth/yarn-error.log*
