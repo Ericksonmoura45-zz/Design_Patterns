@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Welcome, {{ userService.user.name }}</ion-title>
+
+      <ion-buttons slot="end">
+        <ion-button *ngIf="!userService.isLogged" (click)="userService.login()" size="large">
+          <ion-icon slot="end" name="log-in"></ion-icon>
+          Log in
+        </ion-button>
+
+        <ion-chip *ngIf="userService.isLogged" (click)="userService.login()">
+          <ion-avatar>
+            <img [src]="userService.user.profile">
+          </ion-avatar>
+          <ion-label>{{userService.user.name}}</ion-label>
+        </ion-chip>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="folder=='Inbox'">
+    <div *ngIf="!userService.user.inbox.length" class="ion-padding ion-margin ion-text-center empty-div">
+      <ion-icon name="mail-open"></ion-icon>
+      <p>Inbox is empty</p>
+    </div>
+
+    <ion-list text-wrap *ngIf="userService.user.inbox.length">
+      <ion-item *ngFor="let mail of userService.user.inbox; let i = index">
+        <ion-icon name="trash" color="danger" slot="end" (click)="userService.user.inboxToTrash(i)">
+        </ion-icon>
+        <div (click)="userService.user.openMail(i)" class="ion-padding">
+          <ion-label slot="start" class="ion-margin-bottom"><b>{{mail.sender}}</b> sent you at: {{mail.date}}
+          </ion-label>
+          <ion-label><b>Subject</b>: {{mail.subject}}</ion-label>
+          <ion-label><b>Body</b>: Ipsum lorem sit dor amet</ion-label>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="folder=='Trash'">
+    <div *ngIf="!userService.user.trash.length" class="ion-padding ion-margin ion-text-center empty-div">
+      <ion-icon name="mail-open"></ion-icon>
+      <p>Trash is empty</p>
+    </div>
+
+    <ion-list text-wrap *ngIf="userService.user.trash.length">
+      <ion-item *ngFor="let mail of userService.user.trash; let i = index">
+        <ion-icon name="arrow-undo" color="success" slot="end" (click)="userService.user.restoreMail(i)">
+        </ion-icon>
+        <div (click)="userService.user.openMail(i)" class="ion-padding">
+          <ion-label slot="start" class="ion-margin-bottom"><b>{{mail.sender}}</b> sent you at: {{mail.date}}
+          </ion-label>
+          <ion-label><b>Subject</b>: {{mail.subject}}</ion-label>
+          <ion-label><b>Body</b>: Ipsum lorem sit dor amet</ion-label>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="folder=='Spam' && userService">
+    <div *ngIf="!userService.user.spam.length" class="ion-padding ion-margin ion-text-center empty-div">
+      <ion-icon name="mail-open"></ion-icon>
+      <p>Spam is empty</p>
+    </div>
+
+    <ion-list text-wrap *ngIf="userService.user.spam.length">
+      <ion-item *ngFor="let mail of userService.user.spam; let i = index">
+        <ion-icon name="arrow-undo" color="green" slot="end" (click)="userService.user.restoreMail(i)">
+        </ion-icon>
+        <div (click)="userService.user.openMail(i)" class="ion-padding">
+          <ion-label slot="start" class="ion-margin-bottom"><b>{{mail.sender}}</b> sent you at: {{mail.date}}
+          </ion-label>
+          <ion-label><b>Subject</b>: {{mail.subject}}</ion-label>
+          <ion-label><b>Body</b>: Ipsum lorem sit dor amet</ion-label>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+
+
+</ion-content>

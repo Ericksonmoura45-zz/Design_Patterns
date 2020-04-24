@@ -1,0 +1,26 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Log in with...</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Choose an account</ion-label>
+        </ion-list-header>
+
+        <ion-item button *ngFor="let a of accounts; let i = index" (click)="dismiss(i)">
+          <ion-avatar slot="start">
+            <img [src]="a" />
+          </ion-avatar>
+          <div class="ion-padding">
+
+            <ion-label><b>User {{i}}</b></ion-label>
+            <ion-label>ResgistedUser@nullify.com</ion-label>
+          </div>
+
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
