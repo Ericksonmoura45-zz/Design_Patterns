@@ -1,3 +1,8 @@
+/**
+ * Unused code. For consultation only.
+ * Open index.js to see complete code.
+ * Open index.htlm to see project running.
+ */
 class KeyboardSubject {
     // List of observers functions
     state = {
