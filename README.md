@@ -11,8 +11,9 @@ Padrões que abstraem o processo de instanciação.
 
 1. Singleton
 1. Builder
+1. Factory
 1. AbstractFactory
-1. FactoryMethod
+1. Prototype
 
 ## Estruturais
 
@@ -34,12 +35,14 @@ Definem as responsabilidades entre objetos e classes.
 
 ### Fontes
 
+Além do wikipédia, foram consultados:
+
+### Sites e Artigos
+
+1. Source Making: https://sourcemaking.com/
+
 ### Cursos Youtube
 
 1. https://www.youtube.com/watch?v=PrrbDOJLVfI&list=PLnOrFdw5rkTyDPr1yOW2H14Oq8u7IiDyP&index=2
 1. https://www.youtube.com/watch?v=-JFLQcPIElo&list=PL-diSX68u5h81yHqhjvM97LT-cPz2oid7
 1. https://www.youtube.com/watch?v=BWprw8UHIzA&list=PLZlA0Gpn_vH_CthENcPCM0Dww6a5XYC7f
-
-### Sites e Artigos
-
-1. Source Making: https://sourcemaking.com/
