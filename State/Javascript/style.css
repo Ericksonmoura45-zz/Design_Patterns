@@ -1,0 +1,15 @@
+body {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+}
+
+.toggles .field {
+    padding: 16px;
+}
+
+h1 {
+    text-align: center;
+    padding   : 40px 40px 0 50px;
+}
