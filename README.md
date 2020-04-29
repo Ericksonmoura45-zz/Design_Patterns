@@ -40,6 +40,7 @@ Além do wikipédia, foram consultados:
 ### Sites e Artigos
 
 1. Source Making: https://sourcemaking.com/
+1. Tutorials Point: https://www.tutorialspoint.com/design_pattern/index.htm
 
 ### Cursos Youtube
 
