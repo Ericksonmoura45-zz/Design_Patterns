@@ -4,10 +4,6 @@
 class NormalClass {
     name: string = '';
     constructor() { }
-
-    set setName(n: string) {
-        this.name = n;
-    }
 }
 
 const normalA = new NormalClass();
@@ -20,8 +16,6 @@ console.log('normalB name: ', normalB.name);
 console.log(normalA == normalB ? 'normalA == normalB' : 'normalA != normalB');
 
 
-
-
 // USING SINGLETON
 class UniqueObjClass {
     private uniqueObject: UniqueObjClass;
@@ -29,10 +23,6 @@ class UniqueObjClass {
 
     // private constructor so it can't be instanciated with 'new UniqueObjClass()'
     private constructor() { }
-
-    set setName(n: string) {
-        this.name = n;
-    }
 
     getInstance(): UniqueObjClass {
         if (this.uniqueObject == null) {
@@ -53,4 +43,4 @@ money.name = 'b';
 console.log('time name: ', time.name);
 console.log('money name: ', money.name);
 console.log(time == money ? 'time == money' : 'time != money');
-console.log(`Quod erat demonstrandum.`)
+console.log(`Quod erat demonstrandum.`);
