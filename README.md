@@ -35,7 +35,7 @@ Definem as responsabilidades entre objetos e classes.
 
 ### Fontes
 
-Além do wikipédia, foram consultados:
+Além do wikipédia foram consultados:
 
 ### Sites e Artigos
 
