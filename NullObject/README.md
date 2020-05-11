@@ -52,7 +52,7 @@ function buy() {
 
 Você terá pelo menos uma classe a mais para cada tipo de objeto potencialmente nulo, mas ajudará na organização do código ao reduzir a repetição.
 
-## Implementação
+## Implementações
 
 ### Ionic 5 com Angular
 
