@@ -1,0 +1,38 @@
+{
+  "name": "Design_Patterns",
+  "version": "1.0.0",
+  "description": "Foram apresentados pela primeira vez no livro *Design Patterns: Elements if Reusable Object-Oriented Software*. Não tenho o livro, pesquisei tudo na internet.",
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ericksonmoura45/Design_Patterns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ericksonmoura45/Design_Patterns/issues"
+  },
+  "homepage": "https://github.com/Ericksonmoura45/Design_Patterns#readme"
+}
