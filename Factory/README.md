@@ -17,22 +17,22 @@ Diferentemente da Volkswagen, que todo dia sabe exatamente quantos objetos tem d
 
 ## Solução
 
-O idealizado foi a criação de um método que decide qual tipo de instância criar. O escopo da função
+O idealizado foi a criação de um método que decide qual tipo de instância criar. Um exemplo em Javascript é visto abaixo, no código vazado direto dos robôs autônomos da Volkswagen:
 
 ```Javascript
-class Image {}
+class Carro {}
 
-class PNGImage {}
-class JPGImage {}
-class GIFImage {}
+class Gol extends Carro {}
+class Amarok extends Carro {}
+class Fox extends Carro {}
 
-function createImage(type) {
-    const supportedImgTypes = {
-        jpg: JGPImage,
-        png: PNGImage,
-        gif: GIFImage,
+function createCarro(type) {
+    const supportedTypes = {
+        Gol,
+        Amarok,
+        Fox,
     };
-    return new (supportedImgTypes[type] || Image)();
+    return new (supportedTypes[type] || Carro)();
 }
 
 ```
