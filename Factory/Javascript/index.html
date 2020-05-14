@@ -4,12 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style rel="stylesheet" href="./style.css"></style>
-    <title>Document</title>
+    <title>Factory Method</title>
+
+    <!-- Link Bulma's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+
+    <!-- State demo style -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <img src="https://i1.sndcdn.com/artworks-000247089771-94wpi7-t500x500.jpg" download />
+    
+    <h1 class="title">Choose a car model and we'll send you RIGHT NOW</h1>
+    <div class="select-car is-flex">
+        <button id="button-gol" class="button is-success is-flex" onclick="createCar('Gol')">Gol</button>
+        <button id="button-amarok" class="button is-success is-flex" onclick="createCar('Amarok')">Amarok</button>
+        <button id="button-fox" class="button is-success is-flex" onclick="createCar('Fox')">Fox</button>
+        <button id="button-car" class="button is-success is-flex" onclick="createCar()">Car</button>
+    </div>
+    <div id="car-image">
+    </div>
+
 
     <script src="index.js"></script>
 </body>

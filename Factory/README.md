@@ -39,4 +39,10 @@ function createCarro(type) {
 
 ## Consequências
 
+Factory Method é um dos padrões mais baratos de ser implementado. Geralmente, basta adicionar uma função com as características explicadas acima.
+
 ## Implementações
+
+### Javascript
+
+Você é o milésimo visitante do site e gostaríamos de te recompensar com um carro por isso. Escolha a classe do carro e o objeto será criado.

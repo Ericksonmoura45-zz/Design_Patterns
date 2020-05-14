@@ -1,7 +1,7 @@
 {
-  "name": "Design_Patterns",
+  "name": "design_patterns",
   "version": "1.0.0",
-  "description": "Foram apresentados pela primeira vez no livro *Design Patterns: Elements if Reusable Object-Oriented Software*. Não tenho o livro, pesquisei tudo na internet.",
+  "description": "Design patterns",
   "main": "index.js",
   "husky": {
     "hooks": {

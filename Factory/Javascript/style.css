@@ -1,0 +1,16 @@
+body{
+    padding: 20px;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+.select-car{
+    flex-direction: row;
+    justify-content: center;
+}
+.select-car button{
+    margin: 30px;
+}
