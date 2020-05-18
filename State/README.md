@@ -1,8 +1,8 @@
 # State
 
-É um padrão *comportamental* usado para fazer com que um objeto mude de comportamento dependendo de seu estado. Estado em alguns contextos pode ser interpretado como os valores atuais das variáveis internas de um objeto, não é o caso aqui. A analogia óbvia deste padrão é com o conceito de máquina de estados usadas pelos engenheiros para fazer máquinas de refrigerante.
+É um padrão *comportamental* usado para fazer com que um objeto mude de comportamento dependendo de seu estado. Estado em alguns contextos pode ser interpretado como os valores atuais das variáveis internas de um objeto, não é o caso aqui. A analogia óbvia desse padrão é com o conceito de máquina de estados, usada pelos engenheiros para fazer máquinas de refrigerante.
 
-É uma boa prática implementar os objetos State como singletons mas o código fica gigante.
+É uma boa prática implementar os objetos State como singletons, mas o código fica gigante.
 
 ## Problema
 
@@ -19,8 +19,8 @@ Tomemos como exemplo um caixa eletrônico, essas máquinas que permitem o client
 Quando organizamos os procedimentos em estados, podemos deixar bem definido quais partes do caixa estarão funcionando naquele momento e o quais requisitos devem ser cumpridos para dar continuidade. É possível notar as vantagens dessa abordagem:
 
 - Podemos dar autonomia para cada estado deixando-o decidir se o teclado numérico deverá realizar leitura, se o cartão pode ser liberado, se a ação requer senha, etc.
-- Haverá um reaprovitamento de código caso o programa realize um processo no qual o mesmo estado deva ser executado mais de uma vez.
-- Será mais fácil implementar um sistema complexo onde os estados alternam-se indefinidamente.
+- Haverá um reaprovitamento de código caso o programa realize um processo no qual o mesmo estado é executado mais de uma vez.
+- Será mais fácil implementar um sistema complexo no qual os estados alternam-se indefinidamente.
 
 ## Solução
 
@@ -35,3 +35,11 @@ Em alguns casos o código pode aumentar drasticamente porém há maior controle 
 ### Javascript
 
 Foi criado um site com 3 botões toggles. Ao tentar seleciona os três ao mesmo tempo, um dele é escolhido aleatoriamente para ser desmarcado.
+
+### C++
+
+Foi criada uma máquina de estados que identifica se a palavra contém uma quantidade ímpar de 0s e uma quantidade par de 1s.
+
+O diagrama de estados é visto abaixo:
+
+![StateMachine](https://imgur.com/a/3NDhX03)
