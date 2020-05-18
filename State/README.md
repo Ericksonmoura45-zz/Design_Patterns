@@ -42,4 +42,4 @@ Foi criada uma máquina de estados que identifica se a palavra contém uma quant
 
 O diagrama de estados é visto abaixo:
 
-![StateMachine](https://imgur.com/a/3NDhX03)
+![StateMachine](https://i.imgur.com/NL9xRVk.png)
