@@ -26,13 +26,13 @@ class Gol extends Carro {}
 class Amarok extends Carro {}
 class Fox extends Carro {}
 
-function createCarro(type) {
-    const supportedTypes = {
+function criaCarro(type) {
+    const modelos = {
         Gol,
         Amarok,
         Fox,
     };
-    return new (supportedTypes[type] || Carro)();
+    return new (modelos[type] || Carro)();
 }
 
 ```
@@ -45,4 +45,4 @@ Factory Method é um dos padrões mais baratos de ser implementado. Geralmente, 
 
 ### Javascript
 
-Você é o milésimo visitante do site e gostaríamos de te recompensar com um carro por isso. Escolha a classe do carro e o objeto será criado.
+Você é o milésimo visitante do site e gostaríamos de te recompensar com um carro por isso. Escolha a classe (modelo) do carro e o objeto será criado.
