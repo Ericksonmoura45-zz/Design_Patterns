@@ -1,15 +1,16 @@
-#include <iostream>
-#include <stdlib.h>
+#include <stdio.h> //sytem()
+
+#include <iostream> // cin, cout
 #include <string>
 
 using namespace std;
 
 enum CarModel
 {
-    kGeneric = 0,
-    kGol = 1,
-    kAmarok = 2,
-    kFox = 3
+    kGeneric,
+    kGol,
+    kAmarok,
+    kFox
 };
 
 class Car
@@ -82,20 +83,25 @@ public:
     }
     string ToggleAirConditioner()
     {
-        return "AC toggled";
+        return "There's no AC";
     }
     string ToggleIgnition()
     {
-        return "There's no physical key to start the car";
+        return "Ignition toggled";
     }
     string ToggleFrontLight()
     {
-        return "There's no physical lamps to toggle";
+        return "Front lights toggled";
     }
 };
 
 /**
- * Car factory
+ * Implements a Car factory.
+ * 
+ * NOTE: As the factory needs to possibly return differents types of cars, 
+ * this function's return type is a pointer to the super class Car.
+ * 
+ * @return pointer to a Car object
  */
 Car *CreateCar(CarModel model)
 {
@@ -110,22 +116,46 @@ Car *CreateCar(CarModel model)
     case kFox:
         return new Fox;
 
+    case kGeneric:
     default:
         return new Car;
     }
 }
 
+/**
+ * Listen to keyboard and get first typed character.
+ * 
+ * Reads keyboard buffer using cin.get() until its value is not a LINE_FEED
+ * Finally, ignores line feed with cin.ignore()
+ * 
+ * @return an int representing a valid answer to all questions
+ */
+int GetOption()
+{
+    int option;
+    do
+    {
+        option = cin.get();
+    } while (option == 10);
+
+    cin.ignore();
+    return option - 48;
+}
+
+/**
+ * Reads character, cast to int and substract 0's ASCII table value from it.
+ * @return CarModel
+*/
 CarModel CarSelectionMenu()
 {
     system("clear");
-    cout << "Choose a car model from the options below:\n";
+    cout << "Choose a car model:\n";
     cout << "1 - Gol\n";
     cout << "2 - Amarok\n";
     cout << "3 - Fox\n";
-    cout << "Any key - Generic Car\n"
-         << flush;
+    cout << "Any key - Generic Car\n";
 
-    switch ((int)cin.get() - 48) // Reads character, cast to int, substract 0's ASCII table value
+    switch (GetOption())
     {
     case 1:
         return kGol;
@@ -141,13 +171,43 @@ CarModel CarSelectionMenu()
     }
 }
 
+void UseCar(Car *car)
+{
+    cout << "1 - Toggle air conditioner\n";
+    cout << "2 - Toggle ignition\n";
+    cout << "3 - Toggle front lights\n";
+    cout << "Any key - Select another car\n";
+    while (1)
+    {
+        switch (GetOption())
+        {
+        case 1:
+            cout << car->ToggleAirConditioner() << endl;
+            break;
+
+        case 2:
+            cout << car->ToggleIgnition() << endl;
+            break;
+
+        case 3:
+            cout << car->ToggleFrontLight() << endl;
+            break;
+
+        default:
+            return;
+        }
+    }
+}
+
 int main()
 {
     Car *MyCar;
-    MyCar = CreateCar(CarSelectionMenu());
 
-    cout << "What you wanna do with your " << MyCar->name_ << "?" << endl;
-
-    //TODO: use member functions
+    while (1)
+    {
+        MyCar = CreateCar(CarSelectionMenu());
+        cout << "What do you wanna do with your " << MyCar->name_ << "?\n\n";
+        UseCar(MyCar);
+    }
     return 0;
 }
