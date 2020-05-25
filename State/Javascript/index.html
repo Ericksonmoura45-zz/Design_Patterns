@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>State Pattern Demo</title>
     <!-- Link Bulma's CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css"
+    />
     <!-- All bulma extensions-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/css/bulma-extensions.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-switch@2.0.0/dist/css/bulma-switch.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/css/bulma-extensions.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-switch@2.0.0/dist/css/bulma-switch.min.css"
+    />
 
     <!-- State demo style -->
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
-    <h1 class="title">Wants to finish that stagnant project of yours once and for all? Let me help.</h1>
-    <h1 class="subtitle">First, use the toggle buttons to choose how do you want it:</h1>
+  <body>
+    <h1 class="title">
+      Want to finish that stagnant project of yours once and for all? Let me
+      help.
+    </h1>
+    <h1 class="subtitle">
+      First, use the toggle buttons to choose how do you want it:
+    </h1>
     <div class="toggles">
-        <div class="field">
-            <input id="switchQuality" type="checkbox" name="switchQuality" class="switch is-large is-danger">
-            <label for="switchQuality">Excellent quality</label>
-        </div>
+      <div class="field">
+        <input
+          id="switchQuality"
+          type="checkbox"
+          name="switchQuality"
+          class="switch is-large is-danger"
+        />
+        <label for="switchQuality">Excellent quality</label>
+      </div>
 
-        <div class="field">
-            <input id="switchCost" type="checkbox" name="switchCost" class="switch is-large is-success">
-            <label for="switchCost">Very Cheap</label>
-        </div>
+      <div class="field">
+        <input
+          id="switchCost"
+          type="checkbox"
+          name="switchCost"
+          class="switch is-large is-success"
+        />
+        <label for="switchCost">Very Cheap</label>
+      </div>
 
-        <div class="field">
-            <input id="switchFast" type="checkbox" name="switchFast" class="switch is-large is-warning">
-            <label for="switchFast">Done Quickly</label>
-        </div>
+      <div class="field">
+        <input
+          id="switchFast"
+          type="checkbox"
+          name="switchFast"
+          class="switch is-large is-warning"
+        />
+        <label for="switchFast">Done Quickly</label>
+      </div>
     </div>
 
     <script src="./index.js"></script>
-</body>
-
+  </body>
 </html>
