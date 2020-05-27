@@ -7,7 +7,6 @@ using namespace std;
 
 enum CarModel
 {
-    kGeneric,
     kGol,
     kAmarok,
     kFox
@@ -17,19 +16,9 @@ class Car
 {
 public:
     string name_ = "Generic Car";
-
-    string ToggleAirConditioner()
-    {
-        return "There's no physical button to toggle the AC";
-    }
-    string ToggleIgnition()
-    {
-        return "There's no physical key to start the car";
-    }
-    string ToggleFrontLight()
-    {
-        return "There's no physical lamps to toggle";
-    }
+    virtual string ToggleAirConditioner() = 0;
+    virtual string ToggleIgnition() = 0;
+    virtual string ToggleFrontLight() = 0;
 };
 
 class Gol : public Car
@@ -39,7 +28,7 @@ public:
     {
         this->name_ = "Gol";
     }
-    string ToggleAirConditioner()
+    string ToggleAirConditioner() override
     {
         return "There's no AC in your Gol";
     }
@@ -101,7 +90,7 @@ public:
  * NOTE: As the factory needs to possibly return differents types of cars, 
  * this function's return type is a pointer to the super class Car.
  * 
- * @return pointer to a Car object
+ * @return pointer to a Car object, default is Gol
  */
 Car *CreateCar(CarModel model)
 {
@@ -116,19 +105,18 @@ Car *CreateCar(CarModel model)
     case kFox:
         return new Fox;
 
-    case kGeneric:
     default:
-        return new Car;
+        return new Gol;
     }
 }
 
 /**
- * Listen to keyboard and get first typed character.
+ * Listens to keyboard and gets first typed character.
  * 
  * Reads keyboard buffer using cin.get() until its value is not a LINE_FEED
  * Finally, ignores line feed with cin.ignore()
  * 
- * @return an int representing a valid answer to all questions
+ * @return an int representing a valid answer to any questions
  */
 int GetOption()
 {
@@ -143,31 +131,31 @@ int GetOption()
 }
 
 /**
- * Reads character, cast to int and substract 0's ASCII table value from it.
+ * Selects a car model
  * @return CarModel
 */
 CarModel CarSelectionMenu()
 {
-    system("clear");
-    cout << "Choose a car model:\n";
-    cout << "1 - Gol\n";
-    cout << "2 - Amarok\n";
-    cout << "3 - Fox\n";
-    cout << "Any key - Generic Car\n";
-
-    switch (GetOption())
+    while (1)
     {
-    case 1:
-        return kGol;
+        system("clear");
+        cout << "Choose a car model:\n";
+        cout << "1 - Gol\n";
+        cout << "2 - Amarok\n";
+        cout << "3 - Fox\n";
+        // cout << "Any key - Generic Car\n";
 
-    case 2:
-        return kAmarok;
+        switch (GetOption())
+        {
+        case 1:
+            return kGol;
 
-    case 3:
-        return kFox;
+        case 2:
+            return kAmarok;
 
-    default:
-        return kGeneric;
+        case 3:
+            return kFox;
+        }
     }
 }
 
