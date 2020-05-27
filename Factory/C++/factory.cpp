@@ -32,11 +32,11 @@ public:
     {
         return "There's no AC in your Gol";
     }
-    string ToggleIgnition()
+    string ToggleIgnition() override
     {
         return "You try to start your Gol, but nothing happens";
     }
-    string ToggleFrontLight()
+    string ToggleFrontLight() override
     {
         return "Front light toggled, but one of them is burned out.";
     }
@@ -49,15 +49,15 @@ public:
     {
         this->name_ = "Amarok";
     }
-    string ToggleAirConditioner()
+    string ToggleAirConditioner() override
     {
         return "AC toggled";
     }
-    string ToggleIgnition()
+    string ToggleIgnition() override
     {
         return "Ignition toggled";
     }
-    string ToggleFrontLight()
+    string ToggleFrontLight() override
     {
         return "Front light toggled";
     }
@@ -70,15 +70,15 @@ public:
     {
         this->name_ = "Fox";
     }
-    string ToggleAirConditioner()
+    string ToggleAirConditioner() override
     {
         return "There's no AC";
     }
-    string ToggleIgnition()
+    string ToggleIgnition() override
     {
         return "Ignition toggled";
     }
-    string ToggleFrontLight()
+    string ToggleFrontLight() override
     {
         return "Front lights toggled";
     }
