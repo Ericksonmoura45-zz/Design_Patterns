@@ -1,6 +1,6 @@
 /**
  * NOTE: the lack of typing makes this state implementation cofusing.
- * This pattern is better understood in other languages, with static types.
+ * This pattern is better understood in languages with static types.
  */
 
 /**
@@ -19,8 +19,6 @@ class ExcellentCheapState extends State {
 
     constructor(toggles) {
         super();
-        console.log(`ExcelletnCheap constructor: `, toggles.currentState);
-
         this.t = toggles;
     }
 
@@ -54,7 +52,6 @@ class ExcellentFastState extends State {
         this.t.setState(this.t.getExcelState());
     }
 }
-
 class FastCheapState extends State {
     excellent = false;
     cheap = true;
@@ -125,7 +122,6 @@ class CheapState extends State {
         this.t = toggles;
     }
     toggleCost() {
-        // if (this.t.currentState.cheap) this.t.setState(this.t.currentState.excellent ? this.t.getExcellent() : this.t.getFast());
         this.t.setState(this.t.getNoProjState());
     }
     toggleQuality() {
@@ -146,7 +142,7 @@ class NoProjectState extends State {
 
     constructor(toggles) {
         super();
-        this.t = toggles;
+        this.t = toggles; // Lets this class modify Toggles class
     }
     toggleCost() {
         this.t.setState(this.t.getCheapState());

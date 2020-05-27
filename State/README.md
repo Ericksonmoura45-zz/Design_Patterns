@@ -6,7 +6,7 @@
 
 ## Problema
 
-Tomemos como exemplo um caixa eletrônico, essas máquinas que permitem o cliente de um banco retirar dinheiro e veja seu saldo. Ao usá-los, notamos que seu comportamento muda de acordo com as entradas do cliente. Podemos modelar o caixa genérico com os seguintes estados:
+Tomemos como exemplo um caixa eletrônico, essas máquinas que permitem o cliente de um banco retirar dinheiro e ver seu saldo. Ao usá-los, notamos que seu comportamento muda de acordo com as entradas do cliente. Podemos modelar o caixa genérico com os seguintes estados:
 
 1. Esperar que o cartão seja inserido
 1. Identificar banco do cartão
@@ -16,7 +16,7 @@ Tomemos como exemplo um caixa eletrônico, essas máquinas que permitem o client
 1. Soltar o cartão
 1. Retornar ao estado inicial
 
-Quando organizamos os procedimentos em estados, podemos deixar bem definido quais partes do caixa estarão funcionando naquele momento e o quais requisitos devem ser cumpridos para dar continuidade. É possível notar as vantagens dessa abordagem:
+Quando organizamos os procedimentos em estados, podemos deixar bem definido quais partes do caixa estarão funcionando naquele momento e o quais requisitos devem ser cumpridos para dar continuidade. As vantagens dessa abordagem são:
 
 - Podemos dar autonomia para cada estado deixando-o decidir se o teclado numérico deverá realizar leitura, se o cartão pode ser liberado, se a ação requer senha, etc.
 - Haverá um reaprovitamento de código caso o programa realize um processo no qual o mesmo estado é executado mais de uma vez.
