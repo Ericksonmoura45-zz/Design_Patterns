@@ -30,8 +30,9 @@ Definem as responsabilidades entre objetos e classes.
 
 1. Observer
 1. State
-1. Strategy
-1. Null Object
+2. Null Object
+3. Delegate
+4. Strategy
 
 ### Fontes
 
@@ -39,11 +40,12 @@ Além do wikipédia foram consultados:
 
 ### Sites e Artigos
 
-1. Source Making: https://sourcemaking.com/
-1. Tutorials Point: https://www.tutorialspoint.com/design_pattern/index.htm
+1. [Source Making](https://sourcemaking.com/)
+1. [Tutorials Point](https://www.tutorialspoint.com/design_pattern/index.htm)
+1. [Receita de código](https://receitasdecodigo.com.br/java/designer-pattern-java-delegation)
 
 ### Cursos Youtube
 
-1. https://www.youtube.com/watch?v=PrrbDOJLVfI&list=PLnOrFdw5rkTyDPr1yOW2H14Oq8u7IiDyP&index=2
-1. https://www.youtube.com/watch?v=-JFLQcPIElo&list=PL-diSX68u5h81yHqhjvM97LT-cPz2oid7
-1. https://www.youtube.com/watch?v=BWprw8UHIzA&list=PLZlA0Gpn_vH_CthENcPCM0Dww6a5XYC7f
+1. [Padrões de Projeto usando Java](https://www.youtube.com/watch?v=PrrbDOJLVfI&list=PLnOrFdw5rkTyDPr1yOW2H14Oq8u7IiDyP&index=2)
+1. [Curso Padrões de Projeto](https://www.youtube.com/watch?v=-JFLQcPIElo&list=PL-diSX68u5h81yHqhjvM97LT-cPz2oid7)
+2. [Design Patterns voltado para web](https://www.youtube.com/watch?v=BWprw8UHIzA&list=PLZlA0Gpn_vH_CthENcPCM0Dww6a5XYC7f)
