@@ -39,7 +39,7 @@ function criaCarro(type) {
 
 ## Consequências
 
-Factory Method é um dos padrões mais baratos de ser implementado. Geralmente, basta adicionar uma função com as características explicadas acima.
+Factory Method é um dos padrões mais baratos de ser implementado. Geralmente basta adicionar uma função com as características explicadas acima.
 
 ## Implementações
 
